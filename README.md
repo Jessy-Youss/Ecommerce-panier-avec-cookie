@@ -1,2 +1,2 @@
 # Ecommerce-panier-avec-cookie
-Panier e-commerce réactive avec ngx-cookie-service, codé en Node.js &amp; MySQL &amp; ORM: Sequelize (Back end) + Angular 9 &amp; SCSS (Front end) + Axios (Client HTTP)
+Panier e-commerce réactive avec ngx-cookie-service, codé en Node.js & MySQL (Back end) + Sequelize (ORM) + Angular 9 & SCSS (Front end) + Axios (Client HTTP)
