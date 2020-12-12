@@ -16,9 +16,9 @@ Back end:
 
 -Express.js
 
--Sequelize
-
 -MySQL
+
+-Sequelize
 
 ## Development server
 
