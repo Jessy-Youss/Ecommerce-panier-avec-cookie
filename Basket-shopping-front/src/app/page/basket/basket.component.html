@@ -1,0 +1,39 @@
+<div class="container">
+    <h2>Mon panier</h2><br>
+    <div *ngIf="basketEmpty">
+        <br><br><br>
+        <h5 class="card-title">Votre panier est actuellement vide <i class="icon fi fi-shopping-bag-1"></i></h5>
+    </div>
+    <div *ngFor="let product of products; let first = first">
+        <div class="row">
+            <div class="col-7 productBasket bg-light">
+                <img src="/assets/images/{{product.data.pictures}}" alt="produit_panier" width="200px">
+                <div class="marginOnPicture">
+                    <h5>{{product.data.price}}€</h5>
+                    <p>{{product.data.name}}</p>
+                    <p>{{product.data.description}}</p>
+                    <button class="btn btn-delete bg-dark" (click)="deleteToBasket(product)"><i
+                            class=" fi fi-shopping-basket-remove"></i> Supprimer</button>
+                    <select class="qte" [value]="product.quantite"
+                        (change)="changeQte($event.target.value, product.data.id)">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-1"></div>
+            <div *ngIf="first" class="col-4 bg-light">
+                <h5 class="word-total">Total</h5>
+                <p>Sous-total<span style="float: right;">{{sousTotal}}€</span></p>
+                <p>Livraison<span style="float: right;">{{livraison}}€</span></p>
+                <h6>Total<span style="float: right;">{{total}}€</span></h6><br>
+                <div class="center-btn">
+                    <button class="btn btn-command bg-dark">Commander</button>
+                </div>
+            </div>
+        </div>
+    </div><br>
+</div>

@@ -1,0 +1,26 @@
+.navbar{
+    height: 100px;
+    .icon-basket{
+        font-size: 25px;
+        color: white;
+        position: relative;
+    }
+}
+
+.basket-logo{
+    position: relative;
+    font-size: 30px;
+    .counter{
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        font-size: 14px;
+        background-color: white;
+        color: black;
+        border-radius: 50%;
+        left: 18px;
+        line-height: 18px;
+        text-align: center;
+        font-weight: bold;
+    }
+}

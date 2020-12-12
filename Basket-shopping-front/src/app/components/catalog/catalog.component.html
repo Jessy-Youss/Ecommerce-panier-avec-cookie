@@ -1,0 +1,20 @@
+<div class="container">
+  <h2>Nos produits</h2><br>
+  <div class="row">
+    <div class="col-3" *ngFor="let product of products">
+      <div class="card">
+        <img class="card-img-top" src="assets/images/{{product.pictures}}" alt="Card image cap">
+        <div class="card-body bg-light">
+          <h5>{{product.name}}</h5>
+          <p>{{product.description}}</p>
+          <p>{{product.price}}€</p>
+          <button class="btn bg-dark" (click)="addToBasket(product)"><i class=" fi fi-shopping-basket-add"></i> Ajouter
+            au panier</button>
+        </div>
+      </div><br><br>
+    </div>
+  </div>
+  <div *ngIf="alertNbreMax" class="alert alert-danger myAlert-bottom" role="alert">
+    Vous avez ajouté le montant maximal de ce produit
+  </div>
+</div>
